@@ -1,2 +1,11 @@
 GET http://localhost:3004
 
+###
+
+POST http://localhost:3004/login
+content-type: application/json
+
+{
+    "name": "migs",
+    "pw": "wigs"
+}
