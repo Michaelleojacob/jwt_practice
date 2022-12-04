@@ -2,10 +2,43 @@ GET http://localhost:3004
 
 ###
 
+POST http://localhost:3004
+content-type: application/json
+
+{
+    "n":"migs",
+    "p":"wigs"
+}
+###
+
 POST http://localhost:3004/login
 content-type: application/json
 
 {
-    "name": "migs",
-    "pw": "wigs"
+    "n":"migs",
+    "p":"wigs"
 }
+
+###
+get http://localhost:3004/prot
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5hbWUiOiJtaWdzIiwiaWQiOjF9LCJpYXQiOjE2NzAxMzgxMDYsImV4cCI6MTY3MDEzODExMX0.5I8zlKV5LvyKC2RZnqfZE-UA_q2DmakueQW6OKnqTFA
+
+# GET http://localhost:3004
+# Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzAwMDk5MDkzNTgsImRhdGEiOnsidXNlciI6eyJpZCI6MSwibmFtZSI6Im1pZ3MifX0sImlhdCI6MTY3MDAwOTkwN30.ZIb91vidQ0yU7IpNyqwIzuKimTk0PZcetCjsUnYGTqo
+
+###
+# GET http://localhost:3004
+# Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXIiOnsiaWQiOjEsIm5hbWUiOiJtaWdzIn19LCJpYXQiOjE2NzAwMTIxMTMsImV4cCI6MTY3MDAxMzAxM30.2Zt3KX9C-TYIrBhKH1es9v_KTvWwWTNHiMIkKUOLAyU
+
+###
+# GET http://localhost:3004
+# Authorization: {{token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzAwMDk5MDkzNTgsImRhdGEiOnsidXNlciI6eyJpZCI6MSwibmFtZSI6Im1pZ3MifX0sImlhdCI6MTY3MDAwOTkwN30.ZIb91vidQ0yU7IpNyqwIzuKimTk0PZcetCjsUnYGTqo" }}
+###
+
+# POST http://localhost:3004/login
+# content-type: application/json
+
+# {
+#     "name": "migs",
+#     "pw": "wigs"
+# }
