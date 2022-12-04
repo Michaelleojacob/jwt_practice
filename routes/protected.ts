@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { authToken } from "../utils/handleToken";
+import authToken from "../middleware/tokenAuth";
 const protectedRouter = express.Router();
 
 protectedRouter.get("/", authToken, (req: Request, res: Response) => {
