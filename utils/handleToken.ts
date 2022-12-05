@@ -16,15 +16,3 @@ export const createToken = (user: { n: string; id: number }) => {
     console.log("error creating token in createToken", err);
   }
 };
-
-export const verifyToken = (token: string) => {
-  try {
-    jwt.verify(token, process.env.SECRET!, (err, decoded) => {
-      if (err) throw new Error();
-      console.log("decoded!");
-      return decoded;
-    });
-  } catch (err) {
-    console.log("error verifying token in verifyToken", err);
-  }
-};
