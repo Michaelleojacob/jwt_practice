@@ -13,6 +13,6 @@ export const createToken = (user: { n: string; id: number }) => {
     );
     return token;
   } catch (err) {
-    console.log("error creating token in createToken", err);
+    return console.log("error creating token in createToken", err);
   }
 };
