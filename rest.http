@@ -11,6 +11,7 @@ content-type: application/json
 }
 ###
 
+// get token
 POST http://localhost:3004/login
 content-type: application/json
 
@@ -19,26 +20,32 @@ content-type: application/json
     "p":"wigs"
 }
 
+
 ###
+// check token -> make sure to get a new token before using this:
 get http://localhost:3004/prot
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5hbWUiOiJtaWdzIiwiaWQiOjF9LCJpYXQiOjE2NzAxMzg2ODMsImV4cCI6MTY3MDE2MDI4M30.hGiSQmVVUzM4808azEg1jgANKUuiJP-59Ch5F77TRcQ
-
-# GET http://localhost:3004
-# Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzAwMDk5MDkzNTgsImRhdGEiOnsidXNlciI6eyJpZCI6MSwibmFtZSI6Im1pZ3MifX0sImlhdCI6MTY3MDAwOTkwN30.ZIb91vidQ0yU7IpNyqwIzuKimTk0PZcetCjsUnYGTqo
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5hbWUiOiJtaWdzIiwiaWQiOjF9LCJpYXQiOjE2NzAyMjI5NzgsImV4cCI6MTY3MDIyMjk4MX0.cqd6mQoWTwiaOeBubWE-H_Uv9dfihd7WZLYr3fcf0-w
 
 ###
-# GET http://localhost:3004
-# Authorization: Basic eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXIiOnsiaWQiOjEsIm5hbWUiOiJtaWdzIn19LCJpYXQiOjE2NzAwMTIxMTMsImV4cCI6MTY3MDAxMzAxM30.2Zt3KX9C-TYIrBhKH1es9v_KTvWwWTNHiMIkKUOLAyU
+post http://localhost:3004/updateCount
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5hbWUiOiJtaWdzIiwiaWQiOjF9LCJpYXQiOjE2NzAyMjUxMzIsImV4cCI6MTY3MDI0NjczMn0.PzHr7CcilG6oDJVFIUyow4xWaiUzk15JOBXnBSL_GBM
+
 
 ###
-# GET http://localhost:3004
-# Authorization: {{token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzAwMDk5MDkzNTgsImRhdGEiOnsidXNlciI6eyJpZCI6MSwibmFtZSI6Im1pZ3MifX0sImlhdCI6MTY3MDAwOTkwN30.ZIb91vidQ0yU7IpNyqwIzuKimTk0PZcetCjsUnYGTqo" }}
+POST http://localhost:3004/login
+content-type: application/json
+
+{
+    "n":"a",
+    "p":"a"
+}
+
 ###
+post http://localhost:3004/updateCount
+content-type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5hbWUiOiJhIiwiaWQiOjJ9LCJpYXQiOjE2NzAyMjYxNjcsImV4cCI6MTY3MDI0Nzc2N30.-5AGWjVIXgUEapzIt8qVvNZ05Z8kCCAkliYL8BvAf_U
 
-# POST http://localhost:3004/login
-# content-type: application/json
-
-# {
-#     "name": "migs",
-#     "pw": "wigs"
-# }
+{
+    "id":1,
+    "count": 14
+}

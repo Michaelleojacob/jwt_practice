@@ -5,9 +5,7 @@ const protectedRouter = express.Router();
 protectedRouter.get("/", authToken, (req: Request, res: Response) => {
   const token = req.token.data;
 
-  res
-    .status(203)
-    .json({ info: "lol from protectedRouter.get", token: req.token });
+  res.status(203).json({ info: "from protectedRouter", token: req.token });
 });
 
 export default protectedRouter;
